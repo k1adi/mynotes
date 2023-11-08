@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navbar of the site/application.
+// -----------------------------------------------------------------------------
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  position: relative;
+  padding: 1.5rem .65rem;
+
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  &__logo{
+    & > img{
+      width: auto;
+      height: 2.5rem;  
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__theme{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .5rem;
+    background-color: transparent;
+
+    & > img {
+      width: auto;
+      height: 1.75rem;
+    }
+  }
+}
