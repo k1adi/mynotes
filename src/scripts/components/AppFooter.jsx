@@ -4,7 +4,7 @@ import React from 'react'
 function AppFooter() {
   return (
     <>
-			<p>Made with <span className="visually-hidden hide-text">love</span> ❤️ by Rizki Adi</p>
+			<p>Made with <span className="visually-hidden hide-text">love</span> ❤️ by Rizki Adi <span className="footer__emoji">🐢</span></p>
 			<small>Final Submission Dicoding <a href="https://www.dicoding.com/academies/403" className="footer__link">ReactJs Dasar</a> </small>
     </>  
   );
