@@ -47,6 +47,7 @@ body{
 
   color: var(--txt-base);
   background-color: var(--bg-color);
+  @include transition(.25s);
 
   &__header{
     display: block;
@@ -60,7 +61,7 @@ body{
   }
 
   &__content{
-    padding-top: 87px;
+    padding-top: 80px;
     flex: 1;
     width: 100%;
   }
@@ -68,9 +69,9 @@ body{
   &__footer{
     display: block;
     padding: 1.5rem 0;
-    color: var(--bg-color);
+    color: $txt-light;
     text-align: center;
-    background-color: var(--txt-base);
+    background-color: var(--bg-footer);
 
     & > p{
       margin: 0 0 .5rem;
@@ -80,7 +81,7 @@ body{
 
   @include breakpoint-screen-min('sm'){
     &__content{
-      padding-top: 98px;
+      padding-top: 107px;
     }
   }
 }

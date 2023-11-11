@@ -37,14 +37,15 @@
 /// Create variable in css base selected theme
 /// Inspired from @author Kevin Powell
 /// @link https://www.youtube.com/watch?v=EKHd0Dcc4IY
-@mixin color-theme($bg-color, $bg-muted, $nav-border, $txt-title, $txt-base, $txt-muted, $box-shadow){
+@mixin color-theme($bg-color, $bg-muted, $bg-clear, $txt-title, $txt-base, $txt-muted, $box-shadow, $bg-footer){
   --bg-color: #{$bg-color};
   --bg-muted: #{$bg-muted};
-  --nav-border: #{$nav-border};
+  --bg-clear: #{$bg-clear};
   --txt-title: #{$txt-title};
   --txt-base: #{$txt-base};
   --txt-muted: #{$txt-muted};
   --box-shadow: #{$box-shadow};
+  --bg-footer: #{$bg-footer};
 }
 
 // Mixin Breakpoint Screen Min

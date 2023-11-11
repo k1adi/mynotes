@@ -25,28 +25,28 @@ $grey: #6C757D !default;
 
 /// Light Theme List
 /// @type Color
-$bg-light: #F7F7F7 !default;
-$bg-light-muted: #E4E4E4 !default;
+$bg-light: #f3f3f3 !default;
+$bg-light-clear: #FDFDFD !default;
+$bg-light-muted: #e2e2e2 !default;
 $txt-light: #EFF0F1 !default;
 $txt-light-muted: #818991 !default;
-$nav-light: #D6D6D6 !default;
-$box-shadow-light: rgba(128, 128, 128, 0.15) !default;
+$box-shadow-light: rgba(128, 128, 128, 0.20) !default;
 
 /// Dark Theme List
 /// @type Color
 $bg-dark: #202124 !default;
+$bg-dark-clear: #181717 !default;
 $bg-dark-muted: #414141 !default;
 $txt-dark: $bg-dark !default;
 $txt-dark-muted: #C0C5CA !default;
-$nav-dark: rgba(129, 99, 1, 0.5) !default;
-$box-shadow-dark: rgba(61, 61, 61, .7) !default;
+$box-shadow-dark: rgba(61, 61, 61, .8) !default;
 
 /// Light & Dark Theme Array
-/// 1. background-color, 2. background-color-muted, 3. navigation-border
-/// 4. text-heading, 5. text-base, 6. text-muted, 7. Box-shadow
+/// 1. background-color, 2. background-color-muted, 3. background-clear, 4. text-heading,
+/// 5. text-base, 6. text-muted, 7. Box-shadow, 8. background footer
 /// @type List
-$light-theme: $bg-light, $bg-light-muted, $nav-light, $txt-dark, $txt-dark, $txt-light-muted, $box-shadow-light;
-$dark-theme: $bg-dark, $bg-dark-muted, $nav-dark, $primary, $txt-light, $txt-dark-muted, $box-shadow-dark;
+$light-theme: $bg-light, $bg-light-muted, $bg-light-clear, $txt-dark, $txt-dark, $txt-light-muted, $box-shadow-light, $bg-dark;
+$dark-theme: $bg-dark, $bg-dark-muted, $bg-dark-clear, $primary, $txt-light, $txt-dark-muted, $box-shadow-dark, $bg-dark-clear;
 
 
 $placeholder-background: rgb(121, 121, 121) !default;
@@ -55,7 +55,7 @@ $placeholder-animation: 'rgba(190, 190, 190' !default;
 
 /// Container's maximum width
 /// @type Length
-$max-width: 992px !default;
+$max-width: 1440px !default;
 
 /// Container's relative width for small screen
 /// @type Length

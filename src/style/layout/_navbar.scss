@@ -9,20 +9,16 @@
   flex-flow: row wrap;
 
   position: relative;
-  padding: 1.5rem .65rem;
+  padding: 1rem 0;
 
   width: 92%;
-  max-width: 1600px;
+  max-width: $max-width;
   margin: 0 auto;
 
   &__logo{
     & > img{
       width: auto;
-      height: 2.5rem;  
-    }
-
-    &--mobile {
-      display: none;
+      height: 1.75rem;
     }
   }
 
@@ -36,6 +32,17 @@
     & > img {
       width: auto;
       height: 1.75rem;
+    }
+  }
+
+  @include breakpoint-screen-min('sm'){
+    padding: 1.5rem 0;
+    
+    &__logo{
+      & > img{
+        width: auto;
+        height: 2.5rem;          
+      }
     }
   }
 }
