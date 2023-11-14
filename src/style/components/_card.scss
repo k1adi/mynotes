@@ -1,8 +1,8 @@
 .card{
   &__wrapper{
     display: grid;
-    grid-gap: 1.5rem;
-    gap: 1.5rem;
+    grid-gap: .75rem;
+    gap: .75rem;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(-webkit-min-content,-webkit-max-content);
     grid-template-rows: minmax(min-content,max-content);
@@ -50,12 +50,16 @@
   @include breakpoint-screen-min('lg'){
     &__wrapper{
       grid-template-columns: repeat(3,1fr);
+      grid-gap: 1rem;
+      gap: 1rem;
     }
   }
 
   @include breakpoint-screen-min('xl'){
     &__wrapper{
       grid-template-columns: repeat(4,1fr);
+      grid-gap: 1.25rem;
+      gap: 1.25rem;
     }
   }
 }
