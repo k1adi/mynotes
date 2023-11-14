@@ -50,7 +50,7 @@ Alternatively, you can directly access the deployed react web application at myn
 - Search for note data by title and label according by archived.
 
 ## Submission info
-
+![Submission info](screenshoot/submission-info.png)
 
 ## Author
 - GitHub - [k1adi](https://github.com/k1adi)
