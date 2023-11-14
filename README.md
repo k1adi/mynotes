@@ -46,6 +46,7 @@ Alternatively, you can directly access the deployed react web application at myn
 - Add new note data.
 - Edit note data.
 - Delete note data.
+- Open pop-up note detail.
 - Search for note data by title and label according by archived.
 
 ## Submission info
