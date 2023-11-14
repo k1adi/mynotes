@@ -27,26 +27,23 @@ class NotesApp extends React.Component {
 
 	onToggleNoteModalHandler() {
 		this.setState((prevState) => ({
-			noteModalAddIsVisible: prevState.noteModalAddIsVisible === true ? false : true,
+			noteModalAddIsVisible: !prevState.noteModalAddIsVisible,
 			selectedNote: noteObject,
 		}));
 	}
 
 	onGetDetailNoteHandler(id) {
 		this.setState((prevState) => ({
-			noteModalEditIsVisible: prevState.noteModalEditIsVisible === true ? false : true,
+			noteModalEditIsVisible: !prevState.noteModalEditIsVisible,
 			selectedNote: getSelectedNote(this.props.notes, id)
 		}));
 	}
 
 	onToggleCardDetailHandler(id) {
 		this.setState((prevState) => ({
-			noteDetailIsVisible: prevState.noteDetailIsVisible === true ? false : true,
+			noteDetailIsVisible: !prevState.noteDetailIsVisible,
 			selectedNote: getSelectedNote(this.props.notes, id)
-		}), () => {
-			console.log(this.state.noteDetailIsVisible);
-			console.log(this.state.selectedNote);
-		});
+		}));
 	}
 
 	render() {

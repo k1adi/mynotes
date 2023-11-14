@@ -50,7 +50,7 @@ class App extends React.Component {
           title,
           body,
           archived: false,
-          createdAt: new Date(),
+          createdAt: new Date().toISOString(),
           updatedAt: '',
         },
       ],
@@ -62,7 +62,7 @@ class App extends React.Component {
           title,
           body,
           archived: false,
-          createdAt: new Date(),
+          createdAt: new Date().toISOString(),
           updatedAt: '',
         },
       ]
@@ -75,7 +75,7 @@ class App extends React.Component {
   }
 
   onEditNoteHandler({ id, label, title, body, archived, currentNote }) {
-    const updatedNote = { ...currentNote, id, label, body, title, archived, updatedAt: new Date() }
+    const updatedNote = { ...currentNote, id, label, body, title, archived, updatedAt: new Date().toISOString() }
 
     this.setState((prevState) => ({
       savedNotes: [
