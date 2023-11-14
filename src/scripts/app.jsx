@@ -4,8 +4,8 @@ import AppNavbar from './layouts/AppNavbar';
 import AppFooter from './layouts/AppFooter';
 import NotesApp from './components/NotesApp';
 
-import SunIcon from '../assets/sun-icon.png'
-import MoonIcon from '../assets/moon-icon.png'
+import SunIcon from '../assets/sun-icon.png';
+import MoonIcon from '../assets/moon-icon.png';
 
 import { getInitialData } from './utils/data-notes';
 import { getInitialLabel } from './utils/data-label';
