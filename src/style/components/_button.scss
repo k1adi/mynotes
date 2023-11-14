@@ -8,6 +8,11 @@
   border-radius: .5rem;
   cursor: pointer;
 
+  & > svg {
+    vertical-align: top;
+    margin-right: .3rem;
+  }
+
   &--main{
     background-color: $primary;
     color: $txt-light;

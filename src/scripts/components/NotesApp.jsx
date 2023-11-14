@@ -6,6 +6,7 @@ import NoteDetail from './NoteDetail';
 import SearchNotes from './SearchNotes';
 import NotesTabs from './NotesTabs';
 
+import { FaPencil } from "react-icons/fa6";
 import { getSelectedNote, noteObject } from '../utils/data-notes';
 
 
@@ -83,6 +84,7 @@ class NotesApp extends React.Component {
 				<div className='wrapper--add-note'>
 					<ButtonShowModal
 						classList='button button--main button--large'
+						btnIcon={<FaPencil/>}
 						btnText='Create New Note'
 						onShowModalHandler={this.onToggleNoteModalHandler}
 					/>

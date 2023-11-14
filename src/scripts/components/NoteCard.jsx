@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { FaPenToSquare } from "react-icons/fa6";
+import { FaTrashCan } from "react-icons/fa6";
 import { showFormattedDate } from "../utils/data-notes";
 import { getLabelName, getLabelHexCode } from "../utils/data-label";
 
@@ -27,13 +29,15 @@ function NoteCard({ note, labels, onOpenDetail, onEditNote, onDeleteNote }) {
           className='button button--edit'
           onClick={() => onEditNote(note.id)}
         > 
-          edit 
+          <FaPenToSquare />
+          <span>edit</span>
         </button>
         <button
           className='button button--delete'
           onClick={() => onDeleteNote(note.id)}
         > 
-            delete 
+          <FaTrashCan /> 
+          <span>delete</span>
         </button>
       </div>
     </div>
