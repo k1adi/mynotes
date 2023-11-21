@@ -7,22 +7,23 @@ import NotesApp from './components/NotesApp';
 import SunIcon from '../assets/sun-icon.png';
 import MoonIcon from '../assets/moon-icon.png';
 
-import { getInitialData } from './utils/data-notes';
+// import { getInitialData } from './utils/data-notes';
+import { getLocalData, saveLocalData } from './utils/local-storage';
 import { getInitialLabel } from './utils/data-label';
 
 import Swal from 'sweetalert2'
 import ToastComponent from './utils/toast';
 
 class App extends React.Component {
-  constructor(props) {
+  constructor(props) {    
     super(props);
 
     this.state = {
       currentTheme: 'light',
       iconTheme: SunIcon,
       labels: getInitialLabel(),
-      savedNotes: getInitialData(),
-      displayNotes: getInitialData(),
+      savedNotes: getLocalData(),
+      displayNotes: getLocalData(),
     };
 
     this.onToggleThemeHandler = this.onToggleThemeHandler.bind(this);
@@ -66,7 +67,9 @@ class App extends React.Component {
           updatedAt: '',
         },
       ]
-    }));
+    }), () => {
+      saveLocalData(this.state.savedNotes);
+    });
 
     ToastComponent.init({
       text: 'Successfully Added a New Note',
@@ -86,7 +89,9 @@ class App extends React.Component {
         ...prevState.displayNotes.filter(note => note.id !== id),
         updatedNote,
       ]
-    }));
+    }), () => {
+      saveLocalData(this.state.savedNotes);
+    });
 
     ToastComponent.init({
       text: 'Successfully Update the Note',
@@ -107,7 +112,9 @@ class App extends React.Component {
         this.setState((prevState) => ({
           savedNotes: prevState.savedNotes.filter(note => note.id !== id),
           displayNotes: prevState.displayNotes.filter(note => note.id !== id)
-        }));
+        }), () => {
+          saveLocalData(this.state.savedNotes);
+        });
 
         ToastComponent.init({
           text: 'Successfully Deleted the Note',
