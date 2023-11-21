@@ -5,7 +5,7 @@ This react web application was created as a requirement for completing the ["Bel
 
 The purpose of this class is for students to be able developing a website with UI components that are reusable, declarative, and reactive to changes in data, and create a web application with React that utilizes functional components, stateful components, and controlled components.
 
-The application allows users to store and edit notes efficiently, utilizing stateful components to manage data changes triggered by event handling, and have a search notes functionality based on title and label.
+The application enables users to save notes in Web Storage. It utilizes stateful components to efficiently manage data changes triggered by event handling and includes a search functionality for notes based on title and label.
 
 ## Installation
 1. Clone the project repository to your local machine using a Git client or by downloading the project as a zip file.
