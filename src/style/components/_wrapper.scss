@@ -16,6 +16,7 @@
     border-radius: .5rem;
     border: solid 2px var(--bg-muted);
     background-color: var(--bg-clear);
+    @include transition(.25s);
   }
 
   &--tab-note{
