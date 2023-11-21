@@ -47,7 +47,9 @@ Alternatively, you can directly access the deployed react web application at myn
 - Edit note data.
 - Delete note data.
 - Open pop-up note detail.
+- Has two statuses for note data.
 - Search for note data by title and label according by archived.
+- Utilizes localStorage to store data.
 
 ## Submission info
 ![Submission info](screenshoot/submission-info.png)
