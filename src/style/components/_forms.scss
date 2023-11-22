@@ -33,7 +33,7 @@
       background-color: var(--bg-color) !important;
       border: solid 2px transparent;
       border-radius: .35rem;
-      @include transition(0.25s);
+      @include transition(.25s);
 
       &:focus{
         border: solid 2px $primary;
