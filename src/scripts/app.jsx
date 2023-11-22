@@ -3,6 +3,7 @@ import React from 'react';
 import AppNavbar from './layouts/AppNavbar';
 import AppFooter from './layouts/AppFooter';
 import NotesApp from './components/NotesApp';
+import LoaderScreen from './components/LoaderScreen';
 
 import SunIcon from '../assets/sun-icon.png';
 import MoonIcon from '../assets/moon-icon.png';
@@ -19,8 +20,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currentTheme: 'light',
       iconTheme: SunIcon,
+      currentTheme: 'light',
+      isLoadingTime: false,
       labels: getInitialLabel(),
       savedNotes: getLocalData(),
       displayNotes: getLocalData(),
@@ -66,14 +68,18 @@ class App extends React.Component {
           createdAt: new Date().toISOString(),
           updatedAt: '',
         },
-      ]
+      ],
+      isLoadingTime: true,
     }), () => {
       saveLocalData(this.state.savedNotes);
-    });
 
-    ToastComponent.init({
-      text: 'Successfully Added a New Note',
-      status: 'toastify--success'
+      setTimeout(() => {
+        this.setState({ isLoadingTime: false })
+        ToastComponent.init({
+          text: 'Successfully Added a New Note',
+          status: 'toastify--success'
+        });
+      }, 500);
     });
   }
 
@@ -88,14 +94,19 @@ class App extends React.Component {
       displayNotes: [
         ...prevState.displayNotes.filter(note => note.id !== id),
         updatedNote,
-      ]
+      ],
+      isLoadingTime: true,
     }), () => {
       saveLocalData(this.state.savedNotes);
-    });
 
-    ToastComponent.init({
-      text: 'Successfully Update the Note',
-      status: 'toastify--success'
+      setTimeout(() => {
+        this.setState({ isLoadingTime: false })
+        
+        ToastComponent.init({
+          text: 'Successfully Updated the Note',
+          status: 'toastify--success'
+        });
+      }, 500);
     });
   }
   
@@ -111,14 +122,19 @@ class App extends React.Component {
       if(result.isConfirmed){
         this.setState((prevState) => ({
           savedNotes: prevState.savedNotes.filter(note => note.id !== id),
-          displayNotes: prevState.displayNotes.filter(note => note.id !== id)
+          displayNotes: prevState.displayNotes.filter(note => note.id !== id),
+          isLoadingTime: true,
         }), () => {
           saveLocalData(this.state.savedNotes);
-        });
 
-        ToastComponent.init({
-          text: 'Successfully Deleted the Note',
-          status: 'toastify--success'
+          setTimeout(() => {
+            this.setState({ isLoadingTime: false })
+            
+            ToastComponent.init({
+              text: 'Successfully Deleted the Note',
+              status: 'toastify--success'
+            });
+          }, 500);
         });
       }
     })
@@ -142,6 +158,10 @@ class App extends React.Component {
   render() {
     return (
       <div className={`app ${this.state.currentTheme}`}>
+        {this.state.isLoadingTime && (
+					<LoaderScreen />
+				)}
+
         <header className='app__header'>
           <AppNavbar 
             onToggleTheme={this.onToggleThemeHandler} 
