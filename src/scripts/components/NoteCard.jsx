@@ -29,14 +29,14 @@ function NoteCard({ note, labels, onOpenDetail, onEditNote, onDeleteNote }) {
           className='button button--edit'
           onClick={() => onEditNote(note.id)}
         > 
-          <FaPenToSquare />
+          <FaPenToSquare className='icon'/>
           <span>edit</span>
         </button>
         <button
           className='button button--delete'
           onClick={() => onDeleteNote(note.id)}
         > 
-          <FaTrashCan /> 
+          <FaTrashCan className='icon' /> 
           <span>delete</span>
         </button>
       </div>

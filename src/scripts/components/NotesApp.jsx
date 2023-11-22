@@ -84,7 +84,7 @@ class NotesApp extends React.Component {
 				<div className='wrapper--add-note'>
 					<ButtonShowModal
 						classList='button button--main button--large'
-						btnIcon={<FaPencil/>}
+						btnIcon={<FaPencil className='icon'/>}
 						btnText='Create New Note'
 						onShowModalHandler={this.onToggleNoteModalHandler}
 					/>
